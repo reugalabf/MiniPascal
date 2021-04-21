@@ -73,7 +73,7 @@ ProcedureDeclaration :	""procedure"" <identifier> "";"" Block;
 #--------------	
 StatementPart :	CompoundStatement;
 CompoundStatement:	""begin"" Statement ( "";"" Statement)* ""end"" ;
-Statement :	SimpleStatement ; #| StructuredStatement;
+Statement :	SimpleStatement  | StructuredStatement;
 #------------	
 SimpleStatement :	AssignmentStatement | 
 		ProcedureStatement |
@@ -89,8 +89,7 @@ OutputValue :	Expression;
 #-----------	
 StructuredStatement :	CompoundStatement  | 
 #		IfStatement |
-#		WhileStatement;
-;		
+		WhileStatement;		
 IfStatement :	""if"" Expression ""then"" Statement (""else"" Statement)? ;
 			
 WhileStatement :	""while"" Expression  ""do"" Statement;
