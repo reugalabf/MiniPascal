@@ -1,5 +1,5 @@
 as yet unclassified
-programTest1
+program1
 ^'program foobar ;
 var a : integer;
 begin

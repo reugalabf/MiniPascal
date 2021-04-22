@@ -88,7 +88,7 @@ WriteStatement :	""write"" ""("" OutputValue ( "","" OutputValue )* "" )"" ;
 OutputValue :	Expression;
 #-----------	
 StructuredStatement :	CompoundStatement  | 
-#		IfStatement |
+		IfStatement |
 		WhileStatement;		
 IfStatement :	""if"" Expression ""then"" Statement (""else"" Statement)? ;
 			
