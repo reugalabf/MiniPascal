@@ -1,0 +1,22 @@
+{
+	"commentStamp" : "",
+	"super" : "Program",
+	"category" : "MiniPascal",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"terms",
+		"operators",
+		"plusTokens",
+		"minusTokens",
+		"equalToken",
+		"lessThanGreaterThanToken",
+		"lessThanToken",
+		"lessThanEqualToken",
+		"greaterThanEqualToken",
+		"greaterThanToken"
+	],
+	"name" : "Expression",
+	"type" : "normal"
+}

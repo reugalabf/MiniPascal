@@ -1,0 +1,3 @@
+generated
+visitProcedureDeclaration: aProcedureDeclaration
+	^ self visitProgram: aProcedureDeclaration

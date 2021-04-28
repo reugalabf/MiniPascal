@@ -1,7 +1,9 @@
 generated
 scanForTokenX2
-	[ self recordMatch: #(42 43).
+	self recordMatch: #(12).
 	self step.
-	(currentCharacter between: $0 and: $9)
-		or: [ (currentCharacter between: $A and: $Z)
-				or: [ currentCharacter between: $a and: $z ] ] ] whileTrue
+	currentCharacter == $=
+		ifTrue: [ ^ self recordAndReportMatch: #(13) ].
+	currentCharacter == $>
+		ifTrue: [ ^ self recordAndReportMatch: #(14) ].
+	^ self reportLastMatch

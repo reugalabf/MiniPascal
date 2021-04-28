@@ -1,0 +1,3 @@
+generated
+visitConditionalRepetition: aConditionalRepetition
+	^ self visitProgram: aConditionalRepetition

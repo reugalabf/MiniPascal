@@ -1,0 +1,42 @@
+generated-initialize-release
+initialize
+	super initialize.
+	emptyTokens := OrderedCollection new: 2.
+	varTokens := OrderedCollection new: 2.
+	identifierTokens := OrderedCollection new: 2.
+	commaTokens := OrderedCollection new: 2.
+	colonTokens := OrderedCollection new: 2.
+	arrayTokens := OrderedCollection new: 2.
+	leftBracketTokens := OrderedCollection new: 2.
+	integerConstantTokens := OrderedCollection new: 2.
+	periodPeriodTokens := OrderedCollection new: 2.
+	rightBracketTokens := OrderedCollection new: 2.
+	ofTokens := OrderedCollection new: 2.
+	procedureTokens := OrderedCollection new: 2.
+	beginTokens := OrderedCollection new: 2.
+	endTokens := OrderedCollection new: 2.
+	equalTokens := OrderedCollection new: 2.
+	lessThanGreaterThanTokens := OrderedCollection new: 2.
+	lessThanTokens := OrderedCollection new: 2.
+	lessThanEqualTokens := OrderedCollection new: 2.
+	greaterThanEqualTokens := OrderedCollection new: 2.
+	greaterThanTokens := OrderedCollection new: 2.
+	colonEqualTokens := OrderedCollection new: 2.
+	constantTokens := OrderedCollection new: 2.
+	leftParenTokens := OrderedCollection new: 2.
+	rightParenTokens := OrderedCollection new: 2.
+	notTokens := OrderedCollection new: 2.
+	plusTokens := OrderedCollection new: 2.
+	minusTokens := OrderedCollection new: 2.
+	readTokens := OrderedCollection new: 2.
+	writeTokens := OrderedCollection new: 2.
+	_RightParenTokens := OrderedCollection new: 2.
+	ifTokens := OrderedCollection new: 2.
+	thenTokens := OrderedCollection new: 2.
+	elseTokens := OrderedCollection new: 2.
+	whileTokens := OrderedCollection new: 2.
+	doTokens := OrderedCollection new: 2.
+	timesTokens := OrderedCollection new: 2.
+	divTokens := OrderedCollection new: 2.
+	andTokens := OrderedCollection new: 2.
+	orTokens := OrderedCollection new: 2.

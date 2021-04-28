@@ -1,0 +1,25 @@
+{
+	"commentStamp" : "",
+	"super" : "Program",
+	"category" : "MiniPascal",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"leftBracketToken",
+		"terms",
+		"equalTokens",
+		"lessThanGreaterThanTokens",
+		"lessThanTokens",
+		"lessThanEqualTokens",
+		"greaterThanEqualTokens",
+		"greaterThanTokens",
+		"rightBracketToken",
+		"colonEqualToken",
+		"operators",
+		"plusTokens",
+		"minusTokens"
+	],
+	"name" : "Assignment",
+	"type" : "normal"
+}

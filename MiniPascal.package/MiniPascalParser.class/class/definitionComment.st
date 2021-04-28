@@ -47,62 +47,81 @@ definitionComment
 %right ""^"";
 %annotate_tokens;
 
+%root Program;
+#%prefix AST;
+#%suffix Node;
+
+
 #%glr;
 
 %ignore_variables leftParenToken rightParenToken;
 
 Program:
-	""program"" <identifier> "";"" Block;
+	""program"" <identifier>  "";"" Block {{Program}}  ; 
 	
-Block: VariableDeclarationPart 
-	ProcedureDeclarationPart 
-	StatementPart;
+Block: VariableDeclarationPart			
+	ProcedureDeclarationPart 		
+	StatementPart ; #'stmt' ; 		
 #--------------
-VariableDeclarationPart:	<empty> |
-	""var""  (VariableDeclaration "";"") +  
-	;
-VariableDeclaration :	<identifier> ( "","" <identifier> )*  "":""  Type ;
+VariableDeclarationPart:	(VariableDeclaration 'varDecl'  "";"") *  ;
+	
+VariableDeclaration :	""var"" VariableNameList    "":""  Type 'type'   {{VariableDeclaration}} ;
+
+VariableNameList: 	
+	  <identifier> 'variable'  ("","" 'comma'   VariableNameList  )* ;
+	
 Type :	SimpleType |  ArrayType ;
 ArrayType :	""array"" ""["" IndexRange ""]"" ""of"" SimpleType ;
 IndexRange : <integerConstant> "".."" <integerConstant>;
 SimpleType :	TypeIdentifier;
 TypeIdentifier :	<identifier> ;
 #--------------
-ProcedureDeclarationPart :	( ProcedureDeclaration "";"")*;
-ProcedureDeclaration :	""procedure"" <identifier> "";"" Block;
+ProcedureDeclarationPart :	( ProcedureDeclaration 'procDecl' "";"" )*   ;
+ProcedureDeclaration :	""procedure"" 'procToken' <identifier> 'name'  "";"" Block {{ProcedureDeclaration}} ;
 #--------------	
-StatementPart :	CompoundStatement;
-CompoundStatement:	""begin"" Statement ( "";"" Statement)* ""end"" ;
-Statement :	SimpleStatement  | StructuredStatement;
+StatementPart :	CompoundStatement 'compStatement' ;
+CompoundStatement:	""begin"" Statement 'statement' ( "";"" Statement 'statement')* ""end""  {{CompoundStatement}};
+Statement :	SimpleStatement  
+			| StructuredStatement;
 #------------	
 SimpleStatement :	AssignmentStatement | 
 		ProcedureStatement |
 		ReadStatement   | 
 		WriteStatement ;
-AssignmentStatement :	Variable "":="" Expression ;
-ProcedureStatement : 	ProcedureIdentifier;
+AssignmentStatement :	Variable "":="" Expression {{Assignment}} ;
+ProcedureStatement : 	ProcedureIdentifier {{ProcedureCall}};
 ProcedureIdentifier :	<identifier> ;
-ReadStatement :	""read"" ""(""  InputVariable ( "","" InputVariable )* "")"";
-InputVariable :	Variable ;
-WriteStatement :	""write"" ""("" OutputValue ( "","" OutputValue )* "" )"" ;
-OutputValue :	Expression;
+
+ReadStatement :	""read"" ""(""  ParameterNameList  'param' "")"" {{ReadCall}};
+#InputVariable :	Variable ;
+
+ParameterNameList: 	
+	 Variable  'param'  ("","" 'comma'   ParameterNameList  )* ;
+
+
+WriteStatement :	""write"" ""("" OutputValueList  'output' "")"" {{WriteCall}};
+#OutputValue :	Expression;
+
+OutputValueList: Expression 'output' ("","" 'comma' OutputValueList)*;	
+	
 #-----------	
-StructuredStatement :	CompoundStatement  | 
+StructuredStatement :	
+		CompoundStatement  | 
 		IfStatement |
 		WhileStatement;		
-IfStatement :	""if"" Expression ""then"" Statement (""else"" Statement)? ;
+IfStatement :	""if"" Expression ""then"" Statement (""else"" Statement)? {{Condition}};
 			
-WhileStatement :	""while"" Expression  ""do"" Statement;
+WhileStatement :	""while"" Expression 'expression' ""do"" Statement 'statement'  {{ConditionalRepetition}};
 #----------	
-Expression :	SimpleExpression |
-		SimpleExpression RelationalOperator SimpleExpression;		
-SimpleExpression :	Sign? Term ( AddingOperator Term )*;	
-Term :	Factor ( MultiplyingOperator  Factor)* ;
+Expression :	SimpleExpression  {{Expression}}|
+		SimpleExpression RelationalOperator SimpleExpression {{Expression}};		
+SimpleExpression :	Sign?    Term 'term' ( AddingOperator 'operator' Term 'term' )* {{SimpleExpression}};	
+Term :	Factor 'factor' ( MultiplyingOperator 'operator'  Factor 'factor')*  {{Term}} ;
 	
-Factor :	Variable | 
-	<constant> | 
-	""("" Expression "")"" | 
-	""not"" Factor;
+Factor :	Variable {{Factor}} | 
+	<constant> {{Factor}} | 
+	""("" Expression "")""  {{Factor}}| 
+	""not"" Factor {{Factor}};
 #-------------	
 RelationalOperator :	""="" | ""<>"" | ""<"" | ""<="" |"">="" | "">"";	
 Sign :	""+"" | ""-"";    #| <empty>;	

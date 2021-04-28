@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "Program",
+	"category" : "MiniPascal",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"varDeclaration",
+		"procDeclaration",
+		"statement"
+	],
+	"name" : "Block",
+	"type" : "normal"
+}

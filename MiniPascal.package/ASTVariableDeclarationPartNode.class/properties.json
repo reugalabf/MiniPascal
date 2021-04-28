@@ -1,0 +1,22 @@
+{
+	"commentStamp" : "",
+	"super" : "ASTProgramNode",
+	"category" : "MiniPascal",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"varToken",
+		"identifierTokens",
+		"commaTokens",
+		"colonTokens",
+		"arrayTokens",
+		"leftBracketTokens",
+		"integerConstantTokens",
+		"periodPeriodTokens",
+		"rightBracketTokens",
+		"ofTokens"
+	],
+	"name" : "ASTVariableDeclarationPartNode",
+	"type" : "normal"
+}

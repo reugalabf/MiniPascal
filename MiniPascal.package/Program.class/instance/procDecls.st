@@ -1,0 +1,3 @@
+generated
+procDecls
+	^ procDecls

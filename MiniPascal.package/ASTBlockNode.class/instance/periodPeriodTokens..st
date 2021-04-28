@@ -1,0 +1,3 @@
+generated
+periodPeriodTokens: anOrderedCollection
+	periodPeriodTokens := anOrderedCollection

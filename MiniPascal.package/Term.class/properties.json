@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "Program",
+	"category" : "MiniPascal",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"factors",
+		"operators"
+	],
+	"name" : "Term",
+	"type" : "normal"
+}

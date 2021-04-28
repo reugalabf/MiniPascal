@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "ASTProgramNode",
+	"category" : "MiniPascal",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ASTVariableDeclarationNode",
+	"type" : "normal"
+}

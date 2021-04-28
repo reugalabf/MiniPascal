@@ -1,0 +1,25 @@
+{
+	"commentStamp" : "",
+	"super" : "Program",
+	"category" : "MiniPascal",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"ifToken",
+		"terms",
+		"operators",
+		"plusTokens",
+		"minusTokens",
+		"equalToken",
+		"lessThanGreaterThanToken",
+		"lessThanToken",
+		"lessThanEqualToken",
+		"greaterThanEqualToken",
+		"greaterThanToken",
+		"thenToken",
+		"elseToken"
+	],
+	"name" : "Condition",
+	"type" : "normal"
+}

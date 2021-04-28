@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "federicobalaguer 4/22/2021 11:08",
+	"super" : "PackageManifest",
+	"category" : "MiniPascal-Manifest",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ManifestMiniPascal",
+	"type" : "normal"
+}

@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "",
+	"super" : "Program",
+	"category" : "MiniPascal",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"writeToken",
+		"leftParenToken",
+		"output",
+		"rightParenToken"
+	],
+	"name" : "WriteCall",
+	"type" : "normal"
+}

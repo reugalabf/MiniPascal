@@ -1,3 +1,3 @@
 tests
 test6
-	self assert: (MiniPascalParser parse: self program6) notEmpty
+	self assert: (MiniPascalParser parse: self program6) notNil

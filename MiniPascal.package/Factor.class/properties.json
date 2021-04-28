@@ -1,0 +1,28 @@
+{
+	"commentStamp" : "",
+	"super" : "Program",
+	"category" : "MiniPascal",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"leftBracketToken",
+		"terms",
+		"operators",
+		"plusTokens",
+		"minusTokens",
+		"equalToken",
+		"lessThanGreaterThanToken",
+		"lessThanToken",
+		"lessThanEqualToken",
+		"greaterThanEqualToken",
+		"greaterThanToken",
+		"rightBracketToken",
+		"constantToken",
+		"leftParenToken",
+		"rightParenToken",
+		"notTokens"
+	],
+	"name" : "Factor",
+	"type" : "normal"
+}

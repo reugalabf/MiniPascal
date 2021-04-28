@@ -1,29 +1,26 @@
 generated
 scanForToken
 	self step.
-	currentCharacter == Character space
-		ifTrue:
-			[ ^ self scanForTokenX1 ].
 	currentCharacter == $(
-		ifTrue: [ ^ self recordAndReportMatch: #(2) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(1) ].
 	currentCharacter == $)
-		ifTrue: [ ^ self recordAndReportMatch: #(3) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(2) ].
 	currentCharacter == $*
-		ifTrue: [ ^ self recordAndReportMatch: #(4) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(3) ].
 	currentCharacter == $+
-		ifTrue: [ ^ self recordAndReportMatch: #(5) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(4) ].
 	currentCharacter == $,
-		ifTrue: [ ^ self recordAndReportMatch: #(6) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(5) ].
 	currentCharacter == $-
-		ifTrue: [ ^ self recordAndReportMatch: #(7) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(6) ].
 	currentCharacter == $.
 		ifTrue:
-			[ ^ self scanForTokenX7 ].
+			[ ^ self scanForTokenX6 ].
 	currentCharacter == $/
-		ifTrue: [ ^ self recordAndReportMatch: #(9) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(8) ].
 	currentCharacter == $:
 		ifTrue:
-			[ ^ self scanForTokenX6 ].
+			[ ^ self scanForTokenX5 ].
 	currentCharacter == $;
-		ifTrue: [ ^ self recordAndReportMatch: #(12) ].
-	^ self scanForTokenX9
+		ifTrue: [ ^ self recordAndReportMatch: #(11) ].
+	^ self scanForTokenX8
