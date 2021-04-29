@@ -1,7 +1,7 @@
 generated
-output: anExpression
+output: aProgram
 	self output notNil
 		ifTrue: [ self output parent: nil ].
-	output := anExpression.
+	output := aProgram.
 	self output notNil
 		ifTrue: [ self output parent: self ]

@@ -6,8 +6,9 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"terms",
+		"term",
 		"operators",
+		"leftOperands",
 		"plusToken",
 		"minusToken"
 	],

@@ -1,3 +1,3 @@
 generated
 compositeNodeVariables
-	^ #(#terms #varDecls #procDecls)
+	^ #(#leftOperands #varDecls #procDecls)

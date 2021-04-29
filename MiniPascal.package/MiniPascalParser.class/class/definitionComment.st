@@ -42,8 +42,9 @@ definitionComment
 
 
 
-%left ""+"" ""-"";
-%left ""*"" ""/"";
+%left ""+"" ""-"" ""or"";
+%left ""*"" ""/"" ""and"";
+%left  ""=""  ""<>""  ""<""  ""<="" "">=""  "">"";
 %right ""^"";
 %annotate_tokens;
 
@@ -88,7 +89,7 @@ SimpleStatement :	AssignmentStatement |
 		ProcedureStatement |
 		ReadStatement   | 
 		WriteStatement ;
-AssignmentStatement :	Variable "":="" Expression {{Assignment}} ;
+AssignmentStatement :	Variable 'variable' "":=""  Expression 'expression' {{Assignment}} ;
 ProcedureStatement : 	ProcedureIdentifier {{ProcedureCall}};
 ProcedureIdentifier :	<identifier> ;
 
@@ -113,23 +114,48 @@ IfStatement :	""if"" Expression ""then"" Statement (""else"" Statement)? {{Condi
 			
 WhileStatement :	""while"" Expression 'expression' ""do"" Statement 'statement'  {{ConditionalRepetition}};
 #----------	
-Expression :	SimpleExpression  {{Expression}}|
-		SimpleExpression RelationalOperator SimpleExpression {{Expression}};		
-SimpleExpression :	Sign?    Term 'term' ( AddingOperator 'operator' Term 'term' )* {{SimpleExpression}};	
-Term :	Factor 'factor' ( MultiplyingOperator 'operator'  Factor 'factor')*  {{Term}} ;
+#Expression :	SimpleExpression  #{{Expression}}|
+#		| SimpleExpression 'leftHandSide' RelationalOperator 'operator' SimpleExpression 'rightHandSide' {{Expression}}
+#		#|""("" Expression "")""  {{Expression}}
+#		;		
+#				
+#SimpleExpression :	Sign?    Term 'term' ( AddingOperator 'operator' Term 'leftOperand' )* {{SimpleExpression}};	
+		
+#Term :	Factor 'factor' ( MultiplyingOperator 'operator'  Factor 'leftOperand')*  {{Term}} ;
+
+Expression:
+	 Expression 'left' ""+"" 'operator' Expression 'right' {{Binary}}
+	| Expression 'left' ""-"" 'operator' Expression 'right' {{Binary}}
+	| Expression 'left' ""*"" 'operator' Expression 'right' {{Binary}}
+	| Expression 'left' ""/"" 'operator' Expression 'right' {{Binary}}
+	| Expression 'left' ""^"" 'operator' Expression 'right' {{Binary}}
+	 | Expression 'left' ""="" 'operator' Expression 'right' {{BooleanExpression}}
+	| Expression 'left' ""<>"" 'operator' Expression 'right' {{BooleanExpression}}
+	| Expression 'left' "">"" 'operator' Expression 'right' {{BooleanExpression}}
+	| Expression 'left' ""<"" 'operator' Expression 'right' {{BooleanExpression}}
+	| Expression 'left' ""or"" 'operator' Expression 'right' {{BooleanExpression}}
+	| Expression 'left' ""and"" 'operator' Expression 'right' {{BooleanExpression}}
+	| ""("" Expression "")"" {{}}
+	| Factor;
+
 	
-Factor :	Variable {{Factor}} | 
-	<constant> {{Factor}} | 
-	""("" Expression "")""  {{Factor}}| 
-	""not"" Factor {{Factor}};
+Factor :	Variable  
+	| Constant
+	| ""not"" Factor  {{Factor}};
+	
+	
+
 #-------------	
 RelationalOperator :	""="" | ""<>"" | ""<"" | ""<="" |"">="" | "">"";	
 Sign :	""+"" | ""-"";    #| <empty>;	
 AddingOperator :	 ""+"" | ""-"" | ""or"";
 MultiplyingOperator :	""*"" | ""div"" | ""and"";
 #-----------------	
-Variable :	EntireVariable | IndexedVariable;	
-IndexedVariable :	ArrayVariable ""["" Expression ""]"";	
+Variable :	EntireVariable | IndexedVariable ;	
+IndexedVariable :	ArrayVariable 'variable' ""["" Expression 'expression' ""]"" {{IndexedVariable}};	
 ArrayVariable : 	EntireVariable ;
 EntireVariable :	VariableIdentifier;
-VariableIdentifier :	<identifier>;"
+VariableIdentifier :	<identifier> 'name' {{Variable}};
+Constant: 
+	<constant>  {{Constant}}
+	| Sign Constant {{Constant}};"

@@ -6,19 +6,9 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"leftBracketToken",
-		"terms",
-		"equalTokens",
-		"lessThanGreaterThanTokens",
-		"lessThanTokens",
-		"lessThanEqualTokens",
-		"greaterThanEqualTokens",
-		"greaterThanTokens",
-		"rightBracketToken",
+		"variable",
 		"colonEqualToken",
-		"operators",
-		"plusTokens",
-		"minusTokens"
+		"expression"
 	],
 	"name" : "Assignment",
 	"type" : "normal"

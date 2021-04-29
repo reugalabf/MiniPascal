@@ -6,22 +6,10 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"leftBracketToken",
-		"terms",
-		"operators",
-		"plusTokens",
-		"minusTokens",
-		"equalToken",
-		"lessThanGreaterThanToken",
-		"lessThanToken",
-		"lessThanEqualToken",
-		"greaterThanEqualToken",
-		"greaterThanToken",
-		"rightBracketToken",
+		"notTokens",
 		"constantToken",
-		"leftParenToken",
-		"rightParenToken",
-		"notTokens"
+		"plusTokens",
+		"minusTokens"
 	],
 	"name" : "Factor",
 	"type" : "normal"

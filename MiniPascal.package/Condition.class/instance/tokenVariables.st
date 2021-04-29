@@ -1,3 +1,3 @@
 generated
 tokenVariables
-	^ #(#ifToken #equalToken #lessThanGreaterThanToken #lessThanToken #lessThanEqualToken #greaterThanEqualToken #greaterThanToken #thenToken #elseToken #programToken #identifierToken)
+	^ #(#ifToken #operator #thenToken #elseToken #programToken #identifierToken)
