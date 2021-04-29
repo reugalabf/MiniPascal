@@ -1,7 +1,7 @@
 generated
-type: aProgram
+type: aSimpleType
 	self type notNil
 		ifTrue: [ self type parent: nil ].
-	type := aProgram.
+	type := aSimpleType.
 	self type notNil
 		ifTrue: [ self type parent: self ]

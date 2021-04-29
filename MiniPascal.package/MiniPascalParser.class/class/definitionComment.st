@@ -72,10 +72,10 @@ VariableNameList:
 	  <identifier> 'variable'  ("","" 'comma'   VariableNameList  )* ;
 	
 Type :	SimpleType |  ArrayType ;
-ArrayType :	""array"" ""["" IndexRange ""]"" ""of"" SimpleType ;
-IndexRange : <integerConstant> "".."" <integerConstant>;
-SimpleType :	TypeIdentifier;
-TypeIdentifier :	<identifier> ;
+ArrayType :	""array"" ""["" IndexRange 'range'  ""]"" ""of"" SimpleType 'type' {{ArrayType}} ;
+IndexRange : <integerConstant> 'start'"".."" <integerConstant>'end' {{IndexRange}};
+SimpleType :	TypeIdentifier 'type' {{SimpleType}};
+TypeIdentifier :	<identifier> {{TypeIdentifier}} ;
 #--------------
 ProcedureDeclarationPart :	( ProcedureDeclaration 'procDecl' "";"" )*   ;
 ProcedureDeclaration :	""procedure"" 'procToken' <identifier> 'name'  "";"" Block {{ProcedureDeclaration}} ;

@@ -1,0 +1,18 @@
+{
+	"commentStamp" : "",
+	"super" : "Program",
+	"category" : "MiniPascal",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"arrayToken",
+		"leftBracketToken",
+		"range",
+		"rightBracketToken",
+		"ofToken",
+		"type"
+	],
+	"name" : "ArrayType",
+	"type" : "normal"
+}
