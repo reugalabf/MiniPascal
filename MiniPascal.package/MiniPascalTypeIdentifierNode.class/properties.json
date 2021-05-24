@@ -5,7 +5,9 @@
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [ ],
+	"instvars" : [
+		"identifierToken"
+	],
 	"name" : "MiniPascalTypeIdentifierNode",
 	"type" : "normal"
 }

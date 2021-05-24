@@ -4,6 +4,8 @@ definitionComment
 <name> : [a-zA-Z]\w*;
 <whitespace> : \s+;
 
+<space>: \s;
+
 <predefinedIdentifier>: integer | Boolean | true | false;
 
 <specialSymbol>:	
@@ -58,7 +60,7 @@ definitionComment
 %ignore_variables leftParenToken rightParenToken;
 
 Program:
-	""program"" <identifier>  "";"" Block {{Program}}  ; 
+	""program"" <identifier>  "";"" Block {{Root}}  ; 
 	
 Block: VariableDeclarationPart			
 	ProcedureDeclarationPart 		

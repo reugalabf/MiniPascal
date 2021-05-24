@@ -1,3 +1,3 @@
 generated
 nodeVariables
-	^ #(#output #compStatement)
+	^ #(#output)

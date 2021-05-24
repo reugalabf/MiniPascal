@@ -1,3 +1,3 @@
 generated
 tokenVariables
-	^ #(#arrayToken #leftBracketToken #rightBracketToken #ofToken #programToken #identifierToken)
+	^ #(#arrayToken #leftBracketToken #rightBracketToken #ofToken)

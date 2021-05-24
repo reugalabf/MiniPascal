@@ -1,3 +1,3 @@
 generated
 tokenVariables
-	^ #(#start #periodPeriodToken #end #programToken #identifierToken)
+	^ #(#start #periodPeriodToken #end)

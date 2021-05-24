@@ -1,3 +1,3 @@
 generated
 compositeTokenVariables
-	^ #(#variables #commas #semicolonTokens)
+	^ #(#variables #commas)

@@ -1,3 +1,3 @@
 generated
 tokenVariables
-	^ #(#ifToken #operator #thenToken #elseToken #programToken #identifierToken)
+	^ #(#ifToken #operator #thenToken #elseToken)

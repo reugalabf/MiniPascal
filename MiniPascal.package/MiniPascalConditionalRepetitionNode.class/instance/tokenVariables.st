@@ -1,3 +1,3 @@
 generated
 tokenVariables
-	^ #(#whileToken #doToken #programToken #identifierToken)
+	^ #(#whileToken #doToken)

@@ -1,3 +1,3 @@
 generated
 tokenVariables
-	^ #(#operator #programToken #identifierToken)
+	^ #(#operator)

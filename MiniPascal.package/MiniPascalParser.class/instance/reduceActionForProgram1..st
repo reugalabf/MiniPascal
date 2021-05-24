@@ -1,7 +1,7 @@
 generated-reduction actions
 reduceActionForProgram1: nodes
 	| result |
-	result := MiniPascalProgramNode new.
+	result := MiniPascalRootNode new.
 	result programToken: (nodes at: 1).
 	result identifierToken: (nodes at: 2).
 	result addToken: (nodes at: 3) to: result semicolonTokens.

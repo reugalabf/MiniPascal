@@ -5,14 +5,7 @@
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [
-		"programToken",
-		"identifierToken",
-		"semicolonTokens",
-		"varDecls",
-		"procDecls",
-		"compStatement"
-	],
+	"instvars" : [ ],
 	"name" : "MiniPascalProgramNode",
 	"type" : "normal"
 }

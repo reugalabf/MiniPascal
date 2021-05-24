@@ -1,3 +1,3 @@
 generated
 nodeVariables
-	^ #(#range #type #compStatement)
+	^ #(#range #type)

@@ -8,6 +8,7 @@
 	"instvars" : [
 		"beginToken",
 		"statements",
+		"semicolonTokens",
 		"endToken"
 	],
 	"name" : "MiniPascalCompoundStatementNode",
