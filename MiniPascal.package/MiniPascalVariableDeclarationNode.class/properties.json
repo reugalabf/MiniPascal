@@ -1,0 +1,17 @@
+{
+	"commentStamp" : "",
+	"super" : "MiniPascalProgramNode",
+	"category" : "MiniPascal",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"varToken",
+		"variables",
+		"commas",
+		"colonToken",
+		"type"
+	],
+	"name" : "MiniPascalVariableDeclarationNode",
+	"type" : "normal"
+}

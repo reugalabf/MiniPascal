@@ -1,3 +1,0 @@
-generated
-_RightParenTokens: anOrderedCollection
-	_RightParenTokens := anOrderedCollection

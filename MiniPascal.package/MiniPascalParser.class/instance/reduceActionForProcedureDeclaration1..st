@@ -1,7 +1,7 @@
 generated-reduction actions
 reduceActionForProcedureDeclaration1: nodes
 	| result |
-	result := ProcedureDeclaration new.
+	result := MiniPascalProcedureDeclarationNode new.
 	result procToken: (nodes at: 1).
 	result name: (nodes at: 2).
 	result addToken: (nodes at: 3) to: result semicolonTokens.

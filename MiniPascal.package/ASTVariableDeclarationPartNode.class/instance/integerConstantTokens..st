@@ -1,3 +1,0 @@
-generated
-integerConstantTokens: anOrderedCollection
-	integerConstantTokens := anOrderedCollection

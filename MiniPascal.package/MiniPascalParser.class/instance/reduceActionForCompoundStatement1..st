@@ -1,7 +1,7 @@
 generated-reduction actions
 reduceActionForCompoundStatement1: nodes
 	| result |
-	result := CompoundStatement new.
+	result := MiniPascalCompoundStatementNode new.
 	result beginToken: (nodes at: 1).
 	result addNode: (nodes at: 2) to: result statements.
 	result addTokens: ((nodes at: 3) at: 1) to: result semicolonTokens.

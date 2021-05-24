@@ -1,3 +1,0 @@
-generated
-ofTokens
-	^ ofTokens

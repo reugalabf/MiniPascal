@@ -1,3 +1,0 @@
-generated
-doTokens
-	^ doTokens

@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "",
+	"super" : "MiniPascalProgramNode",
+	"category" : "MiniPascal",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"writeToken",
+		"leftParenToken",
+		"output",
+		"rightParenToken"
+	],
+	"name" : "MiniPascalWriteCallNode",
+	"type" : "normal"
+}

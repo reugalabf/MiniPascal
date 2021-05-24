@@ -49,8 +49,8 @@ definitionComment
 %annotate_tokens;
 
 %root Program;
-#%prefix AST;
-#%suffix Node;
+%prefix MiniPascal;
+%suffix Node;
 
 
 #%glr;

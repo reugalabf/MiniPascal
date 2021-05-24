@@ -1,7 +1,7 @@
 generated-reduction actions
 reduceActionForArrayType1: nodes
 	| result |
-	result := ArrayType new.
+	result := MiniPascalArrayTypeNode new.
 	result arrayToken: (nodes at: 1).
 	result leftBracketToken: (nodes at: 2).
 	result range: (nodes at: 3).

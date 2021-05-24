@@ -1,0 +1,18 @@
+{
+	"commentStamp" : "",
+	"super" : "SmaCCParseNode",
+	"category" : "MiniPascal",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"programToken",
+		"identifierToken",
+		"semicolonTokens",
+		"varDecls",
+		"procDecls",
+		"compStatement"
+	],
+	"name" : "MiniPascalProgramNode",
+	"type" : "normal"
+}

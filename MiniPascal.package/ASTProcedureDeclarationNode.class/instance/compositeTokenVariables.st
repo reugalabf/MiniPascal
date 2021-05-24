@@ -1,3 +1,0 @@
-generated
-compositeTokenVariables
-	^ #(#procedureTokens #identifierTokens #emptyTokens #varTokens #commaTokens #colonTokens #arrayTokens #leftBracketTokens #integerConstantTokens #periodPeriodTokens #rightBracketTokens #ofTokens #beginTokens #endTokens #colonEqualTokens #readTokens #writeTokens #_RightParenTokens #ifTokens #thenTokens #elseTokens #whileTokens #doTokens #constantTokens #notTokens #plusTokens #minusTokens #equalTokens #lessThanGreaterThanTokens #lessThanTokens #lessThanEqualTokens #greaterThanEqualTokens #greaterThanTokens #timesTokens #divTokens #andTokens #orTokens)

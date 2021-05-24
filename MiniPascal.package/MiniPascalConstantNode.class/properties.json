@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "MiniPascalProgramNode",
+	"category" : "MiniPascal",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"constantToken",
+		"plusTokens",
+		"minusTokens"
+	],
+	"name" : "MiniPascalConstantNode",
+	"type" : "normal"
+}

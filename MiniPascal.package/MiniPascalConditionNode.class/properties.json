@@ -1,0 +1,20 @@
+{
+	"commentStamp" : "",
+	"super" : "MiniPascalProgramNode",
+	"category" : "MiniPascal",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"ifToken",
+		"left",
+		"operator",
+		"right",
+		"leftParenTokens",
+		"rightParenTokens",
+		"thenToken",
+		"elseToken"
+	],
+	"name" : "MiniPascalConditionNode",
+	"type" : "normal"
+}

@@ -1,7 +1,7 @@
 generated-reduction actions
 reduceActionForWriteStatement1: nodes
 	| result |
-	result := WriteCall new.
+	result := MiniPascalWriteCallNode new.
 	result writeToken: (nodes at: 1).
 	result leftParenToken: (nodes at: 2).
 	result output: (nodes at: 3).
