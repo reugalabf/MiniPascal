@@ -1,4 +1,4 @@
-tests
+source code
 program5
 ^'program foobar ;
 var a : integer;

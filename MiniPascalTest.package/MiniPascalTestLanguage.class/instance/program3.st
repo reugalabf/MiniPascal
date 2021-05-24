@@ -1,4 +1,4 @@
-as yet unclassified
+source code
 program3
 ^'program foobar ;
 var a : integer;

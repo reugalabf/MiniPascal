@@ -1,4 +1,4 @@
-as yet unclassified
+source code
 program7
 ^'program foobar ;
 var a , b: integer;
