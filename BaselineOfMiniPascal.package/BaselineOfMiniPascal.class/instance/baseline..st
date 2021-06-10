@@ -11,7 +11,7 @@ baseline: spec
 				package: 'RB_Parse_Tree_Evaluator'
 					with: [ spec repository: 'github://j-brant/RBParsers/src' ];	
 				package: 'MiniPascal'
-					with: [ spec requires: #('SmaCC' 'RB_Parsers' 'RB_Parsers_Parse_Tree_Evalautor') ] ].
+					with: [ spec requires: #('SmaCC' 'RB_Parsers' 'RB_Parse_Tree_Evaluator') ] ].
 	spec
 		group: 'All'
-		with: #('MiniPascal' 'SmaCC' 'RB_Parsers' 'RB_Parsers_Parse_Tree_Evalautor')
+		with: #('MiniPascal' 'SmaCC' 'RB_Parsers' 'RB_Parse_Tree_Evaluator')
