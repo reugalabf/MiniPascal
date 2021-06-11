@@ -6,7 +6,7 @@ baseline: spec
 		do: [ spec
 				baseline: 'SmaCC'
 					with: [ spec repository: 'github://j-brant/SmaCC/src' ];
-				package: 'RB_Parses'
+				package: 'RB_Parsers'
 					with: [ spec repository: 'github://j-brant/RBParsers/src' ];
 				package: 'RB_Parse_Tree_Evaluator'
 					with: [ spec repository: 'github://j-brant/RBParsers/src' ];
