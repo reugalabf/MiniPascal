@@ -1,10 +1,5 @@
 generated
 scanForTokenX8
-	currentCharacter == $<
-		ifTrue:
-			[ ^ self scanForTokenX2 ].
-	currentCharacter == $=
-		ifTrue: [ ^ self recordAndReportMatch: #(15) ].
 	currentCharacter == $>
 		ifTrue:
 			[ ^ self scanForTokenX4 ].
@@ -14,6 +9,11 @@ scanForTokenX8
 		ifTrue: [ ^ self recordAndReportMatch: #(19) ].
 	currentCharacter == $^
 		ifTrue: [ ^ self recordAndReportMatch: #(20) ].
+	currentCharacter == $`
+		ifTrue: [ [ self step.
+			currentCharacter == $`
+				ifTrue: [ ^ self recordAndReportMatch: #(40) ].
+			true ] whileTrue ].
 	currentCharacter isDigit
 		ifTrue:
 			[ ^ self scanForTokenX7 ].

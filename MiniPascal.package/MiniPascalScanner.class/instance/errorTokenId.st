@@ -1,3 +1,3 @@
 generated
 errorTokenId
-	^ 95
+	^ 96

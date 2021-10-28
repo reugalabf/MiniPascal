@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "",
-	"super" : "SmaCCParser",
+	"super" : "SmaCCGLRParser",
 	"category" : "MiniPascal",
 	"classinstvars" : [ ],
 	"pools" : [ ],

@@ -1,11 +1,13 @@
 {
-	"commentStamp" : "",
-	"super" : "SmaCCParseNodeVisitor",
-	"category" : "MiniPascal",
-	"classinstvars" : [ ],
-	"pools" : [ ],
+	"classtraitcomposition" : "TMiniPascalProgramNodeVisitor classTrait",
 	"classvars" : [ ],
 	"instvars" : [ ],
 	"name" : "MiniPascalProgramNodeVisitor",
-	"type" : "normal"
+	"commentStamp" : "",
+	"super" : "Object",
+	"traitcomposition" : "TMiniPascalProgramNodeVisitor",
+	"type" : "normal",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"category" : "MiniPascal"
 }

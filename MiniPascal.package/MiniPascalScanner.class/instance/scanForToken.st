@@ -23,4 +23,9 @@ scanForToken
 			[ ^ self scanForTokenX5 ].
 	currentCharacter == $;
 		ifTrue: [ ^ self recordAndReportMatch: #(11) ].
+	currentCharacter == $<
+		ifTrue:
+			[ ^ self scanForTokenX2 ].
+	currentCharacter == $=
+		ifTrue: [ ^ self recordAndReportMatch: #(15) ].
 	^ self scanForTokenX8

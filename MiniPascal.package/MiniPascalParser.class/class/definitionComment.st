@@ -4,6 +4,9 @@ definitionComment
 <name> : [a-zA-Z]\w*;
 <whitespace> : \s+;
 
+<patternToken> : \` [^\`]* \` ;
+%glr;
+
 <space>: \s;
 
 <predefinedIdentifier>: integer | Boolean | true | false;

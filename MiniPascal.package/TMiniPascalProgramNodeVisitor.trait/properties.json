@@ -1,0 +1,9 @@
+{
+	"commentStamp" : "",
+	"traitcomposition" : "TSmaCCParseNodeVisitor",
+	"classtraitcomposition" : "TSmaCCParseNodeVisitor classTrait",
+	"category" : "MiniPascal",
+	"classinstvars" : [ ],
+	"name" : "TMiniPascalProgramNodeVisitor",
+	"instvars" : [ ]
+}
